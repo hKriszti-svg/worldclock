@@ -38,6 +38,22 @@ function updateTime() {
         "h:mm:ss [<small>]A[</small>]"
       );
     }
+
+    // Costa-Rica
+    let costaRicaElement = document.querySelector("#costa-rica");
+    if (costaRicaElement) {
+      let costaRicaDateElement = costaRicaElement.querySelector(".date");
+      let costaRicaTimeElement = costaRicaElement.querySelector(".time");
+      let costaRicaTime = moment().tz("America/Costa_Rica");
+  
+      costaRicaDateElement.innerHTML = costaRicaTime.format("MMMM	Do YYYY");
+      costaRicaTimeElement.innerHTML = costaRicaTime.format(
+        "h:mm:ss [<small>]A[</small>]"
+      );
+    }
+
+
+
   }
 
 
